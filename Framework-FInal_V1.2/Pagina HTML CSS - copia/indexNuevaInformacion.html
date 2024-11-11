@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameWork - LONJASAN</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="imagen" href="img/lonjasan-Logo.png">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="hero1">
+        <nav class="nav__hero">
+            <div class="container nav__container">
+                <div class="logo">
+                    <h2 class="logo__name">LONJASAN<span class="point">.</span></h2>
+                </div>
+                <div class="links">
+                    <a href="index.html" class="link">Inicio</a>
+                    <a href="indexNosotros.html" class="link">Nosotros</a>
+                    <a href="indexProyectos.html" class="link">Proyectos</a>
+                    <a href="indexInmuebles.html" class="link">Inmuebles</a>
+                    <a href="indexContacto.html" class="link">Contacto</a>
+                    <a href="indexLogin_.html" class="link--active">Ingresar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="noticias">
+            <div class="container">
+                <h2 class="subtitle">Mantente al día con nosotros<span class="point">.</span></h2>
+                <p class="copy__section">Ofrecemos la mejor atención y soluciones perfectas para las necesidades de nuestro cliente</p>
+                    <nav class="nav__hero2">
+                        <div class="container nav__container1">
+                            <p class="idea" onclick="buscar('tecnología')">Tecnología</p>
+                            <p class="link--active1" onclick="buscar('inmuebles')">Inmuebles</p>
+                            <p class="idea" onclick="buscar('deportes')">Deportes</p>
+                            <p class="idea" onclick="buscar('economía')">Economía</p>
+                            <p class="idea" onclick="buscar('educación')">Educación</p>
+                        </div>
+                    </nav>
+                    <div class="busqueda">
+                        <form class="newsletter">
+                            <input type="text" class="search__input" placeholder="Qué desea buscar" id="busqueda">
+                            <button class="search__submit" onclick="buscarTema()">Buscar</button>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                <div class="card-news"></div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/news.js"></script>
+    <script src="js/inspect.js"></script>
+</body>
+</html>

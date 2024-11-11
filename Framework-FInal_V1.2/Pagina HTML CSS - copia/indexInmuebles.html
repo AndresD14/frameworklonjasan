@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameWork - LONJASAN</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="imagen" href="img/logoLonjasan.svg">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- //Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <a href="https://wa.link/ynckh4" target="_blank" class="float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <header class="hero">
+        <nav class="nav__hero">
+            <div class="container nav__container">
+                <div class="logo">
+                    <h2 class="logo__name">LONJASAN<span class="point">.</span></h2>
+                </div>
+                <div class="links">
+                    <a href="index.html" class="link">Inicio</a>
+                    <a href="indexNosotros.html" class="link">Nosotros</a>
+                    <a href="indexProyectos.html" class="link">Proyectos</a>
+                    <a href="indexInmuebles.html" class="link">Inmuebles</a>
+                    <a href="indexContacto.html" class="link">Contacto</a>
+                    <a href="indexLogin_.html" class="link--active">Ingresar</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container hero__main">
+            <div class="">
+                <h1 class="title">La mejor <span class="title--active">Inmobiliaria de Bucaramanga.</span></h1>
+                <p class="copy">Nos encargamos de buscar tu hogar y llevarlo <span class="copy__active">al siguiente
+                        nivel</span></p>
+
+                <!-- //Campos del Buscador -->
+                <div class="hero__textos2">
+                    <div class="row">
+                        <!-- Buscador de Texto -->
+                        <!-- <div class="col-4">
+                            <input type="text" class="form-control" id="searchbar" placeholder="¿Que desea ver?">
+                        </div> -->
+                        <!-- Categorias -->
+                        <div class="col-3">
+                            <select id="searchcategory_type" class="form-select">
+                                <option value="Tipo">Tipo de Inmueble</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Apartamento">Apartamento</option>
+                                <option value="Apartaestudio">Apartaestudio</option>
+                                <option value="Tipo">Cualquiera</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select id="searchcategory_city" class="form-select">
+                                <option value="Ciudad">Ciudad</option>
+                                <option value="Bucaramanga">Bucaramanga</option>
+                                <option value="Giron">Giron</option>
+                                <option value="Ciudad">Cualquiera</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select id="searchcategory_sale_type" class="form-select">
+                                <option value="Negocio">Tipo de Negocio</option>
+                                <option value="Venta">Venta</option>
+                                <option value="Arriendo">Arriendo</option>
+                                <option value="Negocio">Venta/Arriendo</option>
+                            </select>
+                        </div>
+                        <!-- Boton DropDWN -->
+                        <div class="col-2">
+                            <button onclick="DisplaySlider()" class="drop_btn">+ Rango de Precios</button>
+                        </div>
+                        <!-- Boton Buscar -->
+                        <div class="col-1">
+                            <button class="btn btn-primary" id="searchbtn">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puede que no sea la mejor implementacion, pero le añade un poco de padding -->
+                <div class="row">
+                    <p></p>
+                </div>
+
+                <div class="row">
+
+                    <div id="slider_dropdwn" class="slider_card">
+                        <h4 class="h4_S">Rango de Precios</h4>
+                        <div class="Slider_CenterText">
+                            ¿Activar Rango de Precios? <input type="checkbox" id="check_precios" name="R_Precios"
+                                value="R_Precios">
+                        </div>
+
+                        <div class="price_content">
+                            <div>
+                                <label class="label_S">Min</label>
+                                <p class="p_S" id="min_value">$50</p>
+                            </div>
+
+                            <div>
+                                <label class="label_S">Max</label>
+                                <p class="p_S" id="max_value">$500</p>
+                            </div>
+                        </div>
+
+                        <div class="range_slider">
+                            <div class="range_fill"></div>
+
+                            <input type="range" class="min_value" id="min_value_input" value="100" min="10" max="500"
+                                step="10" />
+
+                            <input type="range" class="max_value" id="max_value_input" value="250" min="10" max="500"
+                                step="10" />
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </header>
+
+    <!-- //Tabla -->
+    <div class="container mt-3 oculto">
+        <table class="table table-dark table-striped">
+            <thead>
+                <th>Building Number</th>
+                <th>Tipo</th>
+                <th>Ciudad</th>
+                <th>Precio</th>
+                <th>N. Habitaciones</th>
+                <th>N. Baños</th>
+                <th>Tipo Negocio</th>
+                <th> <span id="th_lower">Panel Administrador </span><button class="btn btn-success ms-3"
+                        data-bs-toggle="modal" data-bs-target="#actionModal" id="add-0">
+                        <i class="fa-solid fa-plus"></i></button></th>
+            </thead>
+
+            <tbody id="tbody1">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="actionModal" tabindex="-1" aria-labelledby="actionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="actionLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="modXButton"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="modId" class="form-label">Identificador</label>
+                        <input type="number" class="form-control" id="modId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modType" class="form-label">Tipo Inmueble</label>
+                        <!-- <input type="text" class="form-control" id="modType" > -->
+                        <select id="modType" class="form-select">
+                            <option value="Casa">Casa</option>
+                            <option value="Apartamento">Apartamento</option>
+                            <option value="Apartaestudio">Apartaestudio</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modCity" class="form-label">Ciudad</label>
+                        <!-- <input type="text" class="form-control" id="modCity" > -->
+                        <select id="modCity" class="form-select">
+                            <option value="Bucaramanga">Bucaramanga</option>
+                            <option value="Giron">Giron</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modPrice" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="modPrice">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modN_hab" class="form-label">Numero Habitaciones</label>
+                        <input type="number" class="form-control" id="modN_hab">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modN_bannos" class="form-label">Numero Baños</label>
+                        <input type="number" class="form-control" id="modN_bannos">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modT_Nego" class="form-label">Tipo de Negocio</label>
+                        <!-- <input type="text" class="form-control" id="modT_Nego"> -->
+                        <select id="modT_Nego" class="form-select">
+                            <option value="Venta">Venta</option>
+                            <option value="Arriendo">Arriendo</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button type="button" id="actionBtn">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <main>
+        <section class="services">
+            <div class="container">
+                <h2 class="subtitle">Inmuebles disponibles<span class="point">.</span></h2>
+                <p class="copy__section">Estos son los inmuebles que tenemos disponibles para nuestros clientes</p>
+                <article class="container-cards">
+                    <!-- <button id="clonar" class="btn-primary"></button> -->
+                    <!-- Tarjeta 1 -->
+                    <div id="card_building0" class="card">
+                        <img src="img/apartaestudio.jpg" class="card__img">
+                        <div class="cards__text">
+                            <p id="c_city" class="card__list">Bucaramanga</p>
+                            <h3 id="c_type" class="card__title">Apartamento<span class="point">.</span></h3>
+                            <p dir="c_price" class="card__list_Price">$100 M</p>
+                            <p id="c_hab" class="card__copy_list">* 3 Habitaciones</p>
+                            <p id="c_banno" class="card__copy_list">* 2 Baños</p>
+                            <p id="c_size" class="card__copy_list">* X Tamaño</p>
+                            <p></p>
+                            <a href="indexProyectosMas.html" class="card__button">Contactanos</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__caption">
+            <section class="download">
+                <h3 class="title__footer">¡Ya queda poco para que estemos junto a ti!</h3>
+                <div class="download__app">
+                    <div class="download__item">
+                        <i class='bx bx-camera-home download__logo'></i>
+                        <h4 class="download__title">Vista 360°</h4>
+                    </div>
+                    <div class="download__item">
+                        <i class='bx bx-building-house download__logo'></i>
+                        <h4 class="download__title">Más inmuebles</h4>
+                    </div>
+                </div>
+                <div class="footer__copy">
+                    <p class="copyright">LONJASAN &copy; 2024 Todos los derechos reservados</p>
+                    <a href="#" class="politica__privacidad politica__privacidad--margin">Politica de privacidad</a>
+                    <a href="#" class="politica__privacidad ">Terminos y condiciones</a>
+                </div>
+            </section>
+            <section class="get-email">
+                <h3 class="title__footer">¿Quieres estar actualizado con nosotros?</h3>
+                <form class="newsletter newsletter--modifier">
+                    <input type="text" class="newsletter__input" placeholder="Ingresa tu email">
+                    <input type="submit" class="newsletter__submit" value="Informate hoy">
+                </form>
+                <div class="socialmedia">
+                    <p class="socialmedia__legend">Siguenos en:</p>
+                    <i class='socialmedia__icon bx bxl-facebook-circle'></i>
+                    <i class='socialmedia__icon bx bxl-twitter'></i>
+                    <i class='socialmedia__icon bx bxl-instagram'></i>
+                </div>
+            </section>
+        </div>
+        <div class="contact">
+            <div class="item__contact">
+                <i class='bx bx-copyright contact__icon'></i>
+                <h3 class="contact__title">LONJASAN</h3>
+            </div>
+            <div class="item__contact">
+                <i class='bx bx-mail-send contact__icon'></i>
+                <h3 class="contact__title">lonjasan@yahoo.com</h3>
+            </div>
+            <div class="item__contact">
+                <i class='bx bxs-edit-location contact__icon'></i>
+                <h3 class="contact__title">Paseos de la reforma</h3>
+            </div>
+            <div class="item__contact item__contact--gold">
+                <i class='bx bxs-chat contact__icon contact__icon--modifier'></i>
+                <h3 class="contact__title">Contactanos ahora</h3>
+            </div>
+        </div>
+    </footer>
+    <!-- //Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- //Script Slider -->
+    <script src="js/script_slider.js"></script>
+    <!-- //Script Conexion Firebase, Buscador -->
+    <script type="module" src="js/buscador.js"></script>
+    <!-- //Script de inspect -->
+    <script src="js/inspect.js"></script>
+    <script async type="text/javascript"
+        src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/f0963aac519b448ab9ba2ea76ff05b4895ed689f8a714d19adb4333c7a37160c.js"></script>
+</body>
+
+</html>

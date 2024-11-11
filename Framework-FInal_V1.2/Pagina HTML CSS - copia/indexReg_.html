@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesLogin_.css">
+    <link rel="icon" type="imagen" href="img/lonjasan-Logo.png">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Registro e inicio de sesión LONJASAN</title>
+    <script type="module" src="js/register.js" defer></script>
+</head>
+
+<body>
+    <!-- Logo Candado -->
+    <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981" target="_blank" class="float">
+        <i class="fa-solid fa-lock"></i>
+    </a>
+        <!-- Logo Atras -->
+        <a href="indexLogin_.html" target="_blank" class="float1">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Protección de datos personales</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Protección de Datos</h3>
+                    <p>La protección de tus datos personales es una prioridad para nosotros. En cumplimiento con las
+                        normativas de privacidad y protección de datos, nos comprometemos a salvaguardar la información
+                        que
+                        compartes a través de nuestra plataforma.</p>
+                    <h3>Política de Privacidad</h3>
+                    <p>Toda la información personal recopilada será utilizada exclusivamente para los fines declarados y
+                        solo se almacenará el tiempo necesario para cumplir con dichos objetivos. No compartimos,
+                        vendemos
+                        ni divulgamos tu información personal sin tu consentimiento, a menos que sea requerido por ley.
+                    </p>
+                    <h3>Seguridad de la Información</h3>
+                    <p>Utilizamos medidas de seguridad técnicas y organizativas adecuadas para proteger tus datos contra
+                        el
+                        acceso no autorizado, la pérdida accidental y cualquier forma de tratamiento indebido. Nuestra
+                        plataforma está diseñada para ofrecerte un entorno seguro y confiable.</p>
+                    <h3>Tus Derechos</h3>
+                    <p>Tienes el derecho de acceder, rectificar y, en su caso, eliminar tus datos personales. Si deseas
+                        ejercer alguno de estos derechos o tienes preguntas sobre cómo protegemos tu privacidad, no
+                        dudes en
+                        ponerte en contacto con nosotros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register -->
+    <div class="login">
+        <div class="login__content">
+            <div class="login__img">
+                <img src="img/reg_photo.svg" alt="">
+            </div>
+            <div class="login__forms">
+                <form action="" class="login__registre" id="login-in">
+                    <h1 class="login__title">Crear cuenta</h1>
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Correo electrónico" class="login__input" id="email_sign">
+                    </div>
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Contraseña" class="login__input" id="password_sign">
+                    </div>
+                    <a href="#" class="login__button" id="submit_sign">Crear</a>
+                    <div>
+                        <span class="login__account">Ya tienes cuenta ?</span>
+                        <a href="indexLogin_.html" class="login__signin" id="sign-up">Inicia</a>
+                    </div>
+                    <a href="#" class="login__signin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Protección de datos</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Script Animaciones Register-->
+    <script src="js/mainLogin.js"></script>
+    <!-- Script Inspeccionar-->
+    <script src="js/inspect.js"></script>
+    <!-- Script Registro-->
+    <script type="module" src="js/register.js"></script>
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
